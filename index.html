@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>City Weather Guide</title>
+    <meta
+      name="description"
+      content="Explore major cities with live weather, air quality, forecast, country information, tourism and history."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/src/css/style.css" />
+  </head>
+  <body>
+    <div class="animated-bg">
+      <span class="aurora aurora-1"></span>
+      <span class="aurora aurora-2"></span>
+      <span class="aurora aurora-3"></span>
+
+      <span class="orb orb-1"></span>
+      <span class="orb orb-2"></span>
+      <span class="orb orb-3"></span>
+
+      <span class="grid-glow"></span>
+      <span class="stars"></span>
+    </div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <div>
+          <h1>City Weather Guide</h1>
+          <p class="tagline">
+            Weather, air quality, tourism, and city facts in one place.
+          </p>
+        </div>
+
+        <form id="searchForm" class="search-form">
+          <input
+            id="cityInput"
+            type="text"
+            placeholder="Search a city, e.g. Tokyo"
+            aria-label="Search city"
+          />
+          <button type="submit">Search</button>
+        </form>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <div class="hero-text">
+          <p class="eyebrow">Global city insights</p>
+          <h2 id="heroTitle">Discover major cities around the world</h2>
+          <p id="heroSubtitle">
+            Select a city to see current weather, air quality, country details,
+            tourist attractions, and historical relevance.
+          </p>
+
+          <div class="city-time-panel">
+            <div class="time-box">
+              <span class="time-label">Local time</span>
+              <strong id="cityLocalTime">--:--:--</strong>
+            </div>
+            <div class="time-box">
+              <span class="time-label">Timezone</span>
+              <strong id="cityTimezone">--</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="featured-controls">
+          <label>Featured cities</label>
+          <div id="featuredCities" class="featured-city-list"></div>
+        </div>
+      </section>
+
+      <section id="statusMessage" class="status-message hidden"></section>
+
+      <section class="grid top-grid">
+        <article class="card overview-card">
+          <h3>Current Weather</h3>
+          <div id="currentWeather" class="content-placeholder">
+            Select a city to view current weather.
+          </div>
+        </article>
+
+        <article class="card overview-card">
+          <h3>Air Quality Estimate</h3>
+          <div id="airQuality" class="content-placeholder">
+            Air quality data will appear here.
+          </div>
+        </article>
+
+        <article class="card overview-card">
+          <h3>City Snapshot</h3>
+          <div id="citySnapshot" class="content-placeholder">
+            Population, currency, and city details will appear here.
+          </div>
+        </article>
+      </section>
+
+      <section class="card">
+        <h3>5-Day Forecast</h3>
+        <div id="forecastGrid" class="forecast-grid">
+          <div class="content-placeholder">Forecast will appear here.</div>
+        </div>
+      </section>
+
+      <section class="grid info-grid">
+        <article class="card">
+          <h3>About the City</h3>
+          <div id="cityIntro" class="content-placeholder">
+            City introduction will appear here.
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Popular Places</h3>
+          <div id="touristLocations" class="content-placeholder">
+            Popular places will appear here.
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>City Background</h3>
+          <div id="historicalRelevance" class="content-placeholder">
+            Historical details will appear here.
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>Built with Vite, Open-Meteo, REST Countries, and Wikimedia data.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>
