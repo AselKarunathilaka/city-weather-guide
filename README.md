@@ -83,6 +83,7 @@ This project uses free public APIs and public content sources, including:
 
 ## 📂 Project structure
 
+```text
 city-weather-guide/
 ├─ .github/
 │  └─ workflows/
